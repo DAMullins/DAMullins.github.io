@@ -3,7 +3,7 @@ import { defineAstroPaperConfig } from "./src/types/config";
 export default defineAstroPaperConfig({
   site: {
     url: "https://damullins.com",
-    author: "David Andrew Mullins",
+    author: "Andrew Mullins",
     title: "Andrew Mullins",
     description: "Tech blog.",
     lang: "en",
