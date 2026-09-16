@@ -1,0 +1,60 @@
+---
+import config from "@/config";
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+
+
+type Project = {
+  title: string;
+  description: string;
+  tag: string;
+};
+
+// Define your projects here. 
+// The 'tag' must perfectly match the tag used in your Markdown frontmatter.
+const projects : Project[] = [
+  
+
+  //{
+  //  title: "Data Visualization Tool",
+  //  description: "A web-based dashboard for rendering real-time telemetry data.",
+  //  tag: "data-viz", 
+  //},
+  //{
+  //  title: "Automated Backup Script",
+  // description: "A background utility for syncing local directories to cloud storage.",
+  //  tag: "backup-utility",
+  //}
+];
+---
+
+<Layout title={`Projects | ${config.site.title}`}>
+  <Header />
+  
+  <main id="main-content">
+    <section class="mx-auto mt-8 mb-12 w-full max-w-5xl px-4">
+      <h1 class="mb-6 text-2xl font-semibold text-skin-accent">Projects</h1>
+      
+      {projects.length === 0 ? (
+        <p class="text-skin-base">No projects listed yet. Check back soon.</p>
+      ) : (
+        <ul class="space-y-6">
+          {projects.map(project => (
+            <li class="rounded-lg border border-skin-line p-6 shadow-sm">
+              <a 
+                href={`/tags/${project.tag}/`} 
+                class="inline-block text-xl font-medium text-skin-accent decoration-dashed underline-offset-4 hover:underline"
+              >
+                {project.title}
+              </a>
+              <p class="mt-2 text-skin-base">{project.description}</p>
+            </li>
+          ))}
+        </ul>
+      )}
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
