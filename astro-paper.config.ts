@@ -6,10 +6,10 @@ export default defineAstroPaperConfig({
     author: "David Andrew Mullins",
     title: "Andrew Mullins",
     description: "Tech blog.",
-    ogImage: "default-og.jpg",
     lang: "en",
     timezone: "America/New_York",
     dir: "ltr",
+    ogImage: "site-og.jpg",
   },
   posts: {
     perPage: 4,
