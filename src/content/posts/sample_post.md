@@ -2,8 +2,8 @@
 pubDatetime: 2026-09-16T14:30:00Z
 title: My First Sample Post
 slug: my-first-sample-post
-featured: true
-draft: false
+featured: false
+draft: true
 tags:
   - testing
   - example

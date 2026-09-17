@@ -16,11 +16,30 @@ type Project = {
 const projects : Project[] = [
   
 
-  //{
-  //  title: "Data Visualization Tool",
-  //  description: "A web-based dashboard for rendering real-time telemetry data.",
-  //  tag: "data-viz", 
-  //},
+  {
+    title: "Ray Tracing in One Weekend",
+    description: "Updates from me following along with and extending <a href='https://raytracing.github.io/books/RayTracingInOneWeekend.html' target='_blank' class='underline decoration-dashed underline-offset-4 hover:text-skin-accent'>Ray Tracing in One Weekend</a> using CUDA. ",
+    tag: "ray-tracing-in-one-weekend", 
+  },
+
+  {
+    title: "Custom Finite Element Solver",
+    description: "Updates on my work developing a custom finite element solver for solving complex PDEs.",
+    tag: "finite-element-solver", 
+  },
+
+  {
+    title: "Software Defined Radio Scanner",
+    description: "A custom Software Defined Radio (SDR) tool",
+    tag: "sdr-Tool", 
+  },
+
+  {
+    title: "Gaussian Splat Visualization",
+    description: "Using an Xbox One Kinect to collect data for gaussian splat rendering.",
+    tag: "gaussian-splat-visualization", 
+  },
+
   //{
   //  title: "Automated Backup Script",
   // description: "A background utility for syncing local directories to cloud storage.",
@@ -48,7 +67,7 @@ const projects : Project[] = [
               >
                 {project.title}
               </a>
-              <p class="mt-2 text-skin-base">{project.description}</p>
+              <p class="mt-2 text-skin-base" set:html={project.description}></p>
             </li>
           ))}
         </ul>
